@@ -1,0 +1,1363 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Project Estimate — La-vie Factory</title>
+<meta name="description" content="Webサイトリニューアル ご提案・お見積もり / La-vie Factory" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   La-vie Factory — Project Estimate
+   Tone: Clean / Minimal / Sans-serif Editorial
+   ============================================================ */
+
+:root{
+  --color-bg: #F9F9F9;
+  --color-bg-pure: #FFFFFF;
+  --color-ink: #1A1A1A;
+  --color-ink-strong: #000000;
+  --color-line: rgba(26,26,26,0.12);
+  --color-line-strong: rgba(26,26,26,0.32);
+  --color-accent: #1A1A1A;     /* 強調はインクと同色(ニュートラル) */
+  --color-mute: #6B6B6B;
+
+  --ff-display: "Inter", "Noto Sans JP", -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --ff-jp: "Noto Sans JP", "Inter", -apple-system, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  --ff-sans: "Noto Sans JP", "Inter", -apple-system, "Helvetica Neue", Arial, sans-serif;
+
+  --pad-x: clamp(28px, 8vw, 120px);
+  --gap-section: clamp(80px, 12vw, 160px);
+  --max-w: 1200px;
+}
+
+/* ---------- reset ---------- */
+*,*::before,*::after{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+img{max-width:100%;display:block;}
+button{font:inherit;}
+
+html{
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--color-bg);
+  color:var(--color-ink);
+  font-family:var(--ff-sans);
+  font-weight:400;
+  font-size:15px;
+  line-height:1.95;
+  letter-spacing:0.02em;
+}
+
+/* ---------- typography helpers ---------- */
+.eyebrow{
+  font-family:var(--ff-display);
+  font-weight:500;
+  font-size:12px;
+  letter-spacing:0.24em;
+  color:var(--color-mute);
+  text-transform:uppercase;
+}
+.section-num{
+  font-family:var(--ff-display);
+  font-weight:500;
+  font-size:12px;
+  letter-spacing:0.32em;
+  color:var(--color-ink);
+  text-transform:uppercase;
+}
+.section-label{
+  font-family:var(--ff-display);
+  font-weight:300;
+  font-size:38px;
+  letter-spacing:0.02em;
+  color:var(--color-ink);
+  margin:14px 0 0;
+  line-height:1.15;
+}
+.section-label-ja{
+  font-family:var(--ff-jp);
+  font-weight:400;
+  font-size:13px;
+  letter-spacing:0.4em;
+  color:var(--color-mute);
+  margin-top:18px;
+}
+h1,h2,h3,h4{margin:0;font-weight:400;}
+p{margin:0 0 1.2em;}
+
+a{
+  color:inherit;
+  text-decoration:none;
+  border-bottom:1px solid var(--color-line);
+  padding-bottom:2px;
+}
+
+/* ---------- container ---------- */
+.container{
+  max-width:var(--max-w);
+  margin:0 auto;
+  padding-left:var(--pad-x);
+  padding-right:var(--pad-x);
+}
+
+.section{
+  padding-top:var(--gap-section);
+  padding-bottom:var(--gap-section);
+  position:relative;
+}
+
+.divider{
+  border:0;
+  border-top:1px solid var(--color-line);
+  margin:0;
+}
+
+/* ============================================================
+   ▼ HERO
+   ============================================================ */
+.hero{
+  min-height:100vh;
+  display:grid;
+  grid-template-rows:auto 1fr auto;
+  padding:clamp(28px, 5vw, 56px) var(--pad-x);
+  position:relative;
+}
+.hero-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:24px;
+  font-size:12px;
+  letter-spacing:0.24em;
+  color:var(--color-mute);
+}
+.hero-top .brand{
+  font-family:var(--ff-display);
+  font-weight:600;
+  letter-spacing:0.16em;
+  color:var(--color-ink);
+  font-size:16px;
+  text-transform:uppercase;
+}
+.hero-top .meta{
+  text-align:right;
+  font-family:var(--ff-display);
+  font-weight:400;
+}
+
+.hero-center{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  padding:clamp(40px,10vw,120px) 0;
+  max-width:1100px;
+}
+.hero-eyebrow{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-bottom:clamp(28px,4vw,40px);
+}
+.hero-eyebrow .rule{
+  width:64px;height:1px;background:var(--color-line-strong);display:inline-block;
+}
+.hero-title{
+  font-family:var(--ff-display);
+  font-weight:300;
+  font-size:clamp(56px, 11vw, 152px);
+  line-height:0.98;
+  letter-spacing:-0.015em;
+  color:var(--color-ink-strong);
+  margin:0;
+}
+.hero-title .em{
+  font-weight:500;
+}
+.hero-sub{
+  margin-top:clamp(28px,4vw,48px);
+  font-family:var(--ff-jp);
+  font-weight:500;
+  font-size:clamp(16px,1.6vw,20px);
+  letter-spacing:0.28em;
+  color:var(--color-ink);
+}
+.hero-sub-en{
+  margin-top:14px;
+  font-family:var(--ff-display);
+  font-weight:400;
+  font-size:13px;
+  letter-spacing:0.2em;
+  color:var(--color-mute);
+}
+
+.hero-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:24px;
+}
+.hero-issue{
+  font-family:var(--ff-display);
+  font-size:12px;
+  letter-spacing:0.2em;
+  color:var(--color-mute);
+}
+.hero-issue strong{
+  display:block;
+  font-weight:500;
+  font-size:11px;
+  letter-spacing:0.4em;
+  color:var(--color-ink);
+  margin-bottom:4px;
+  text-transform:uppercase;
+}
+
+.scroll-indicator{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  font-family:var(--ff-display);
+  font-size:11px;
+  letter-spacing:0.32em;
+  color:var(--color-mute);
+  text-transform:uppercase;
+}
+.scroll-indicator .line{
+  width:1px;height:56px;background:var(--color-line-strong);
+}
+
+/* ============================================================
+   ▼ SECTION HEAD (asymmetric 2-col)
+   ============================================================ */
+.section-head{
+  display:grid;
+  grid-template-columns:1fr 3fr;
+  gap:clamp(24px,5vw,80px);
+  align-items:start;
+  margin-bottom:clamp(48px,7vw,96px);
+}
+.section-head .left{
+  border-top:1px solid var(--color-ink);
+  padding-top:18px;
+}
+.section-head .right{
+  padding-top:18px;
+}
+
+/* ============================================================
+   ▼ OVERVIEW
+   ============================================================ */
+.overview-body{
+  display:grid;
+  grid-template-columns:1fr 3fr;
+  gap:clamp(24px,5vw,80px);
+}
+.overview-body .left{
+  font-family:var(--ff-display);
+  font-weight:500;
+  font-size:12px;
+  letter-spacing:0.24em;
+  color:var(--color-mute);
+  text-transform:uppercase;
+}
+.overview-lede{
+  font-family:var(--ff-jp);
+  font-weight:400;
+  font-size:clamp(17px,1.8vw,20px);
+  line-height:2.0;
+  letter-spacing:0.06em;
+  color:var(--color-ink);
+  margin-bottom:48px;
+}
+.scope-grid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:32px 56px;
+  margin-top:32px;
+}
+.scope-item{
+  border-top:1px solid var(--color-line);
+  padding-top:18px;
+}
+.scope-item .num{
+  font-family:var(--ff-display);
+  font-weight:500;
+  font-size:12px;
+  letter-spacing:0.24em;
+  color:var(--color-ink);
+}
+.scope-item .name{
+  font-family:var(--ff-jp);
+  font-weight:500;
+  font-size:15px;
+  letter-spacing:0.1em;
+  margin-top:8px;
+  color:var(--color-ink);
+}
+.scope-item .name-en{
+  font-family:var(--ff-display);
+  font-weight:400;
+  font-size:12px;
+  letter-spacing:0.18em;
+  color:var(--color-mute);
+  margin-top:4px;
+}
+.note-block{
+  margin-top:56px;
+  padding:24px 0 0;
+  border-top:1px solid var(--color-line);
+  color:var(--color-mute);
+  font-size:13px;
+  letter-spacing:0.06em;
+  line-height:1.95;
+}
+
+/* ============================================================
+   ▼ ESTIMATE TABLES
+   ============================================================ */
+.cat-block{margin-bottom:clamp(56px,7vw,88px);}
+.cat-head{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:end;
+  gap:24px;
+  padding-bottom:18px;
+  border-bottom:1px solid var(--color-ink);
+  margin-bottom:8px;
+}
+.cat-head .cat-no{
+  font-family:var(--ff-display);
+  font-weight:500;
+  font-size:12px;
+  letter-spacing:0.24em;
+  color:var(--color-mute);
+  text-transform:uppercase;
+}
+.cat-head .cat-title{
+  font-family:var(--ff-jp);
+  font-weight:500;
+  font-size:clamp(17px,1.9vw,21px);
+  letter-spacing:0.14em;
+  color:var(--color-ink);
+}
+.cat-head .cat-title small{
+  display:block;
+  font-family:var(--ff-display);
+  font-weight:400;
+  font-size:11px;
+  letter-spacing:0.24em;
+  color:var(--color-mute);
+  margin-top:6px;
+  text-transform:uppercase;
+}
+.cat-head .cat-sub{
+  font-family:var(--ff-display);
+  font-size:13px;
+  letter-spacing:0.16em;
+  color:var(--color-ink);
+  white-space:nowrap;
+  text-transform:uppercase;
+}
+.cat-head .cat-sub .price{font-weight:600;letter-spacing:0.04em;text-transform:none;}
+
+.estimate-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+.estimate-table th,
+.estimate-table td{
+  text-align:left;
+  padding:18px 0;
+  border-bottom:1px solid var(--color-line);
+  vertical-align:baseline;
+}
+.estimate-table thead th{
+  font-family:var(--ff-display);
+  font-weight:500;
+  font-size:11px;
+  letter-spacing:0.3em;
+  color:var(--color-mute);
+  border-bottom:1px solid var(--color-line);
+  padding:12px 0;
+  text-transform:uppercase;
+}
+
+.estimate-table .col-item{width:auto;}
+.estimate-table .col-qty{
+  width:28%;
+  color:var(--color-mute);
+  font-family:var(--ff-display);
+  font-weight:400;
+  letter-spacing:0.06em;
+}
+.estimate-table .col-price{
+  width:22%;
+  text-align:right;
+  font-family:var(--ff-display);
+  font-weight:500;
+  letter-spacing:0.04em;
+  white-space:nowrap;
+}
+
+.item-name{
+  font-family:var(--ff-jp);
+  font-weight:500;
+  font-size:15px;
+  letter-spacing:0.06em;
+  color:var(--color-ink);
+}
+.item-name small{
+  display:block;
+  font-family:var(--ff-display);
+  font-weight:400;
+  font-size:11px;
+  letter-spacing:0.06em;
+  color:var(--color-mute);
+  margin-top:4px;
+  text-transform:none;
+}
+.price{font-variant-numeric:tabular-nums;}
+
+/* ▼ Total block */
+.total-wrap{
+  margin-top:clamp(56px,8vw,96px);
+  border-top:1px solid var(--color-ink);
+  padding-top:24px;
+  display:grid;
+  grid-template-columns:1fr minmax(320px,40%);
+  gap:32px;
+  align-items:start;
+}
+.total-wrap .total-note{
+  font-family:var(--ff-display);
+  font-weight:500;
+  font-size:12px;
+  letter-spacing:0.24em;
+  color:var(--color-mute);
+  text-transform:uppercase;
+}
+.total-wrap .total-note .ja{
+  display:block;
+  font-family:var(--ff-jp);
+  font-weight:500;
+  font-size:12px;
+  letter-spacing:0.24em;
+  color:var(--color-ink);
+  margin-top:6px;
+  text-transform:none;
+}
+.total-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+.total-table td{
+  padding:14px 0;
+  border-bottom:1px solid var(--color-line);
+  font-family:var(--ff-display);
+  letter-spacing:0.04em;
+}
+.total-table td:first-child{
+  font-family:var(--ff-jp);
+  font-weight:500;
+  letter-spacing:0.14em;
+  color:var(--color-ink);
+}
+.total-table td:last-child{
+  text-align:right;
+  font-variant-numeric:tabular-nums;
+}
+.total-table .grand td{
+  border-bottom:2px solid var(--color-ink-strong);
+  padding-top:22px;
+  padding-bottom:22px;
+  font-weight:700;
+  font-size:17px;
+  color:var(--color-ink-strong);
+}
+.total-table .grand td:first-child{letter-spacing:0.18em;}
+.total-table .sub td{font-weight:600;color:var(--color-ink);}
+
+/* ============================================================
+   ▼ MAINTENANCE CARD
+   ============================================================ */
+.maintenance{
+  display:flex;
+  justify-content:center;
+}
+.care-card{
+  width:min(720px, 100%);
+  border:1px solid var(--color-line-strong);
+  background:var(--color-bg-pure);
+  padding:clamp(40px,6vw,72px) clamp(28px,5vw,72px);
+  text-align:center;
+  position:relative;
+}
+
+.care-eyebrow{
+  font-family:var(--ff-display);
+  font-weight:500;
+  font-size:12px;
+  letter-spacing:0.32em;
+  color:var(--color-mute);
+  margin-bottom:18px;
+  text-transform:uppercase;
+}
+.care-title{
+  font-family:var(--ff-display);
+  font-weight:300;
+  font-size:clamp(32px,4.6vw,48px);
+  letter-spacing:-0.005em;
+  color:var(--color-ink);
+  line-height:1.1;
+}
+.care-title .em{font-weight:500;}
+.care-title-ja{
+  margin-top:14px;
+  font-family:var(--ff-jp);
+  font-weight:500;
+  font-size:13px;
+  letter-spacing:0.32em;
+  color:var(--color-mute);
+}
+.care-price{
+  margin:36px 0 12px;
+  font-family:var(--ff-display);
+  font-weight:300;
+  font-size:clamp(28px,4vw,40px);
+  letter-spacing:-0.01em;
+  color:var(--color-ink);
+}
+.care-price .price{font-weight:600;}
+.care-price .unit{
+  font-family:var(--ff-jp);
+  font-weight:400;
+  font-size:13px;
+  letter-spacing:0.2em;
+  color:var(--color-mute);
+  margin-left:8px;
+  vertical-align:middle;
+}
+.care-divider{
+  width:32px;height:1px;background:var(--color-line-strong);
+  margin:28px auto;
+}
+.care-list{
+  list-style:none;
+  margin:0;padding:0;
+  display:flex;flex-direction:column;gap:14px;
+  text-align:left;
+  max-width:480px;
+  margin-inline:auto;
+}
+.care-list li{
+  font-family:var(--ff-jp);
+  font-weight:400;
+  font-size:14px;
+  letter-spacing:0.08em;
+  color:var(--color-ink);
+  padding-left:24px;
+  position:relative;
+  line-height:1.8;
+}
+.care-list li::before{
+  content:"";
+  position:absolute;
+  left:0;top:0.85em;
+  width:12px;height:1px;
+  background:var(--color-ink);
+}
+
+/* ============================================================
+   ▼ SCHEDULE TIMELINE
+   ============================================================ */
+.timeline{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  border-top:1px solid var(--color-ink);
+  border-bottom:1px solid var(--color-line);
+  margin-top:24px;
+}
+.phase{
+  padding:48px clamp(20px,3vw,40px) 56px;
+  border-left:1px solid var(--color-line);
+  position:relative;
+}
+.phase:first-child{border-left:0;}
+
+.phase-no{
+  font-family:var(--ff-display);
+  font-weight:500;
+  font-size:12px;
+  letter-spacing:0.28em;
+  color:var(--color-ink);
+  text-transform:uppercase;
+}
+.phase-period{
+  margin-top:14px;
+  font-family:var(--ff-display);
+  font-weight:300;
+  font-size:clamp(28px,3vw,40px);
+  letter-spacing:-0.01em;
+  color:var(--color-ink);
+  line-height:1.05;
+}
+.phase-period small{
+  display:block;
+  font-family:var(--ff-jp);
+  font-weight:500;
+  font-size:12px;
+  letter-spacing:0.2em;
+  color:var(--color-mute);
+  margin-top:8px;
+}
+.phase-title{
+  margin-top:32px;
+  font-family:var(--ff-jp);
+  font-weight:500;
+  font-size:14px;
+  letter-spacing:0.16em;
+  color:var(--color-ink);
+  padding-top:18px;
+  border-top:1px solid var(--color-line);
+}
+.phase-detail{
+  margin-top:14px;
+  font-size:13px;
+  color:var(--color-mute);
+  letter-spacing:0.04em;
+  line-height:1.95;
+}
+
+.schedule-total{
+  margin-top:48px;
+  display:flex;
+  justify-content:flex-end;
+  align-items:baseline;
+  gap:18px;
+  font-family:var(--ff-display);
+  letter-spacing:0.18em;
+  color:var(--color-mute);
+  font-size:12px;
+  text-transform:uppercase;
+}
+.schedule-total strong{
+  font-family:var(--ff-display);
+  font-weight:600;
+  font-size:clamp(20px,2.2vw,26px);
+  color:var(--color-ink);
+  letter-spacing:0.04em;
+  text-transform:none;
+}
+.schedule-total .ja{
+  font-family:var(--ff-jp);
+  font-weight:500;
+  font-size:12px;
+  letter-spacing:0.28em;
+  color:var(--color-ink);
+  text-transform:none;
+}
+
+/* ============================================================
+   ▼ NOTES
+   ============================================================ */
+.notes{
+  display:grid;
+  grid-template-columns:1fr 3fr;
+  gap:clamp(24px,5vw,80px);
+}
+.notes-list{
+  list-style:none;margin:0;padding:0;
+  border-top:1px solid var(--color-line);
+}
+.notes-list li{
+  display:grid;
+  grid-template-columns:48px 1fr;
+  gap:24px;
+  padding:22px 0;
+  border-bottom:1px solid var(--color-line);
+  font-family:var(--ff-jp);
+  font-weight:400;
+  font-size:14px;
+  letter-spacing:0.06em;
+  color:var(--color-ink);
+  line-height:1.95;
+}
+.notes-list li .n{
+  font-family:var(--ff-display);
+  font-weight:500;
+  font-size:12px;
+  letter-spacing:0.2em;
+  color:var(--color-ink);
+  padding-top:4px;
+}
+
+/* ============================================================
+   ▼ FOOTER
+   ============================================================ */
+.footer{
+  border-top:1px solid var(--color-line);
+  padding:clamp(56px,8vw,96px) var(--pad-x) clamp(40px,5vw,64px);
+  background:var(--color-bg);
+}
+.footer-inner{
+  max-width:var(--max-w);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:48px;
+  align-items:end;
+}
+.footer-brand{
+  font-family:var(--ff-display);
+  font-weight:600;
+  font-size:clamp(32px,4.6vw,48px);
+  letter-spacing:0.02em;
+  color:var(--color-ink);
+  line-height:1;
+  text-transform:uppercase;
+}
+.footer-brand small{
+  display:block;
+  font-family:var(--ff-jp);
+  font-weight:400;
+  font-size:11px;
+  letter-spacing:0.36em;
+  color:var(--color-mute);
+  margin-top:14px;
+  text-transform:none;
+}
+.footer-contact{
+  text-align:right;
+  font-family:var(--ff-display);
+  font-size:13px;
+  letter-spacing:0.12em;
+  color:var(--color-ink);
+  line-height:2.2;
+}
+.footer-contact .label{
+  display:block;
+  font-weight:500;
+  font-size:11px;
+  letter-spacing:0.32em;
+  color:var(--color-mute);
+  margin-bottom:8px;
+  text-transform:uppercase;
+}
+.footer-bottom{
+  max-width:var(--max-w);
+  margin:48px auto 0;
+  padding-top:24px;
+  border-top:1px solid var(--color-line);
+  display:flex;
+  justify-content:space-between;
+  font-family:var(--ff-display);
+  font-size:11px;
+  letter-spacing:0.24em;
+  color:var(--color-mute);
+  text-transform:uppercase;
+}
+
+/* ============================================================
+   ▼ RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px){
+  body{font-size:14px;}
+  .hero-top{flex-direction:column;align-items:flex-start;}
+  .hero-top .meta{text-align:left;}
+  .hero-bottom{flex-direction:column;align-items:flex-start;gap:32px;}
+
+  .section-head,
+  .overview-body,
+  .notes,
+  .total-wrap{
+    grid-template-columns:1fr;
+  }
+  .section-head .left{padding-bottom:0;}
+
+  .scope-grid{grid-template-columns:1fr;}
+
+  .timeline{grid-template-columns:1fr;}
+  .phase{border-left:0;border-top:1px solid var(--color-line);}
+  .phase:first-child{border-top:0;}
+
+  .footer-inner{grid-template-columns:1fr;align-items:start;}
+  .footer-contact{text-align:left;}
+  .footer-bottom{flex-direction:column;gap:8px;}
+
+  /* table -> card */
+  .cat-head{
+    grid-template-columns:1fr;
+    gap:6px;
+  }
+  .cat-head .cat-sub{text-align:left;}
+
+  .estimate-table thead{display:none;}
+  .estimate-table,
+  .estimate-table tbody,
+  .estimate-table tr,
+  .estimate-table td{display:block;width:100%;}
+  .estimate-table tr{
+    padding:18px 0;
+    border-bottom:1px solid var(--color-line);
+  }
+  .estimate-table td{
+    padding:6px 0;
+    border:0;
+    text-align:left !important;
+    width:auto !important;
+  }
+  .estimate-table .col-qty::before{
+    content:"Qty / ";
+    color:var(--color-mute);
+    margin-right:6px;
+  }
+  .estimate-table .col-price{
+    font-size:18px;
+    margin-top:6px;
+    color:var(--color-ink-strong);
+  }
+}
+
+/* ============================================================
+   ▼ MOTION PREFERENCES
+   ============================================================ */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:0.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:0.001ms !important;
+    scroll-behavior:auto !important;
+  }
+}
+
+/* ============================================================
+   ▼ PRINT (A4 portrait)
+   ============================================================ */
+@page{
+  size:A4 portrait;
+  margin:14mm 12mm;
+}
+@media print{
+  :root{
+    --pad-x:0;
+    --gap-section:24mm;
+    --color-bg:#ffffff;
+  }
+  html,body{
+    background:#ffffff !important;
+    color:#000;
+    font-size:10.5pt;
+    line-height:1.7;
+  }
+  body{
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+  .hero{min-height:auto;page-break-after:always;padding:0;}
+  .hero-center{padding:24mm 0;}
+  .hero-title{font-size:64pt;}
+  .scroll-indicator{display:none;}
+  .section{
+    page-break-inside:avoid;
+    break-inside:avoid;
+    page-break-before:always;
+    padding:18mm 0;
+  }
+  .section + .section{padding-top:18mm;}
+  .care-card{box-shadow:none;}
+  .container{padding:0;max-width:100%;}
+  a{color:inherit;border-bottom:0;}
+  .footer{page-break-before:always;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ▼ ここから ヒーロー ▼ -->
+<header class="hero" id="top">
+  <div class="hero-top">
+    <div class="brand">La-vie Factory</div>
+    <div class="meta">
+      For Private Review<br>
+      Issued · 2026.05
+    </div>
+  </div>
+
+  <div class="hero-center">
+    <div class="hero-eyebrow">
+      <span class="rule"></span>
+      <span class="eyebrow">Proposal &amp; Estimate — № 001</span>
+    </div>
+    <h1 class="hero-title">
+      Project<br>
+      <span class="em">Estimate</span>
+    </h1>
+    <div class="hero-sub">Webサイトリニューアル ご提案・お見積もり</div>
+    <div class="hero-sub-en">For Brand Renewal &amp; Digital Experience Design</div>
+  </div>
+
+  <div class="hero-bottom">
+    <div class="hero-issue">
+      <strong>Document</strong>
+      Confidential — Prepared by La-vie Factory
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>Scroll</span>
+      <span class="line"></span>
+    </div>
+  </div>
+</header>
+<!-- ▲ ここまで ヒーロー ▲ -->
+
+
+<main class="container">
+
+  <!-- ▼ ここから 01 / Overview ▼ -->
+  <section class="section" id="overview" aria-labelledby="ov-title">
+    <div class="section-head">
+      <div class="left">
+        <div class="section-num">01 — Overview</div>
+        <h2 class="section-label" id="ov-title">Project Overview</h2>
+        <div class="section-label-ja">プロジェクト概要</div>
+      </div>
+      <div class="right">
+        <p class="overview-lede">
+          明治屋音響様のこれまでの「軌跡」とこれからの「発展」を一本の「大きな木」とみたて<br>
+          歴史と未来をつなぐブランドストーリーを軸に、Webサイトのフルリニューアルをご提案いたします。
+        </p>
+      </div>
+    </div>
+
+    <div class="overview-body">
+      <div class="left">
+        <span>Scope of Work</span>
+      </div>
+      <div class="right">
+        <p>
+          約15ページ規模のフルリニューアルを想定。ペルソナ設計から
+          UI/UXデザイン、ブランドムービーの撮影・編集、WordPressによる
+          実装までをワンストップで担当いたします。既存サイトはWordPressを
+          採用されているため、CMSの新規導入は不要です。新サイト用テーマの
+          設計・実装は本見積に含みます。
+        </p>
+
+        <div class="scope-grid" role="list">
+          <div class="scope-item" role="listitem">
+            <div class="num">01</div>
+            <div class="name">ペルソナ・UX 設計</div>
+            <div class="name-en">Persona &amp; UX Architecture</div>
+          </div>
+          <div class="scope-item" role="listitem">
+            <div class="num">02</div>
+            <div class="name">UI / ビジュアルデザイン</div>
+            <div class="name-en">UI &amp; Visual Design</div>
+          </div>
+          <div class="scope-item" role="listitem">
+            <div class="num">03</div>
+            <div class="name">ブランディング設計</div>
+            <div class="name-en">Brand Identity Tuning</div>
+          </div>
+          <div class="scope-item" role="listitem">
+            <div class="num">04</div>
+            <div class="name">動画撮影・編集</div>
+            <div class="name-en">Brand Movie Production</div>
+          </div>
+          <div class="scope-item" role="listitem">
+            <div class="num">05</div>
+            <div class="name">WordPress 構築</div>
+            <div class="name-en">CMS Implementation</div>
+          </div>
+          <div class="scope-item" role="listitem">
+            <div class="num">06</div>
+            <div class="name">ページ制作 約15ページ</div>
+            <div class="name-en">Approx. 15 Pages</div>
+          </div>
+        </div>
+
+        <div class="note-block">
+          ※ 既存サイトはWordPress運用のため、CMS本体の新規設置は不要です。<br>
+          　ただし、新サイト用テーマ設計・テンプレート実装は本提案範囲に含みます。
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ▲ ここまで 01 / Overview ▲ -->
+
+  <hr class="divider">
+
+  <!-- ▼ ここから 02 / Estimate (料金テーブル) ▼ -->
+  <section class="section" id="estimate" aria-labelledby="es-title">
+    <div class="section-head">
+      <div class="left">
+        <div class="section-num">02 — Estimate</div>
+        <h2 class="section-label" id="es-title">Scope of Work</h2>
+        <div class="section-label-ja">料金内訳</div>
+      </div>
+      <div class="right">
+        <p style="font-family:var(--ff-jp);font-weight:400;font-size:15px;letter-spacing:0.08em;line-height:2.0;">
+          下記4カテゴリにて、企画から公開まで一貫した制作体制でお見積もりいたします。
+          価格は税抜表記です。各項目は単独でのご依頼にも対応可能です。
+        </p>
+      </div>
+    </div>
+
+    <!-- ▼ Category 01 -->
+    <div class="cat-block">
+      <div class="cat-head">
+        <div class="cat-no">Category 01</div>
+        <div class="cat-title">基本料金・ディレクション費<small>Direction &amp; Planning</small></div>
+        <div class="cat-sub">小計 / Subtotal &nbsp; <span class="price">¥600,000</span></div>
+      </div>
+      <table class="estimate-table" role="table">
+        <thead>
+          <tr>
+            <th class="col-item" scope="col">Item</th>
+            <th class="col-qty" scope="col">Qty</th>
+            <th class="col-price" scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-item"><div class="item-name">企画・構成費<small>Concept &amp; Structure Planning</small></div></td>
+            <td class="col-qty">一式</td>
+            <td class="col-price"><span class="price">¥200,000</span></td>
+          </tr>
+          <tr>
+            <td class="col-item"><div class="item-name">要件定義・進行管理費<small>Requirements &amp; Project Management</small></div></td>
+            <td class="col-qty">一式</td>
+            <td class="col-price"><span class="price">¥250,000</span></td>
+          </tr>
+          <tr>
+            <td class="col-item"><div class="item-name">ペルソナ設計・UX設計費<small>Persona &amp; UX Design</small></div></td>
+            <td class="col-qty">一式</td>
+            <td class="col-price"><span class="price">¥150,000</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ▼ Category 02 -->
+    <div class="cat-block">
+      <div class="cat-head">
+        <div class="cat-no">Category 02</div>
+        <div class="cat-title">デザイン・コーディング費<small>Design &amp; Front-end</small></div>
+        <div class="cat-sub">小計 / Subtotal &nbsp; <span class="price">¥1,350,000</span></div>
+      </div>
+      <table class="estimate-table" role="table">
+        <thead>
+          <tr>
+            <th class="col-item" scope="col">Item</th>
+            <th class="col-qty" scope="col">Qty</th>
+            <th class="col-price" scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-item"><div class="item-name">トップページ デザイン / コーディング<small>Top Page — Design &amp; Coding</small></div></td>
+            <td class="col-qty">1P</td>
+            <td class="col-price"><span class="price">¥350,000</span></td>
+          </tr>
+          <tr>
+            <td class="col-item"><div class="item-name">下層ページ デザイン / コーディング<small>Sub Pages — Design &amp; Coding</small></div></td>
+            <td class="col-qty">14P (¥50,000 × 14)</td>
+            <td class="col-price"><span class="price">¥700,000</span></td>
+          </tr>
+          <tr>
+            <td class="col-item"><div class="item-name">スマートフォン対応(レスポンシブデザイン)<small>Responsive Design</small></div></td>
+            <td class="col-qty">一式</td>
+            <td class="col-price"><span class="price">¥200,000</span></td>
+          </tr>
+          <tr>
+            <td class="col-item"><div class="item-name">ブランディング設計(トーン&amp;マナー策定)<small>Tone &amp; Manner Direction</small></div></td>
+            <td class="col-qty">一式</td>
+            <td class="col-price"><span class="price">¥100,000</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ▼ Category 03 -->
+    <div class="cat-block">
+      <div class="cat-head">
+        <div class="cat-no">Category 03</div>
+        <div class="cat-title">システム構築・機能追加費<small>System &amp; Functions</small></div>
+        <div class="cat-sub">小計 / Subtotal &nbsp; <span class="price">¥450,000</span></div>
+      </div>
+      <table class="estimate-table" role="table">
+        <thead>
+          <tr>
+            <th class="col-item" scope="col">Item</th>
+            <th class="col-qty" scope="col">Qty</th>
+            <th class="col-price" scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-item"><div class="item-name">WordPress構築・テーマ実装<small>WordPress Theme Implementation ※既存環境への構築</small></div></td>
+            <td class="col-qty">一式</td>
+            <td class="col-price"><span class="price">¥300,000</span></td>
+          </tr>
+          <tr>
+            <td class="col-item"><div class="item-name">お問い合わせフォーム設置<small>Contact Form Setup</small></div></td>
+            <td class="col-qty">一式</td>
+            <td class="col-price"><span class="price">¥80,000</span></td>
+          </tr>
+          <tr>
+            <td class="col-item"><div class="item-name">ブログ・お知らせ更新機能<small>News / Blog Module</small></div></td>
+            <td class="col-qty">一式</td>
+            <td class="col-price"><span class="price">¥70,000</span></td>
+          </tr>
+          <tr>
+            <td class="col-item"><div class="item-name">その他特殊機能(検索・予約・EC等)<small>Optional Features</small></div></td>
+            <td class="col-qty">—</td>
+            <td class="col-price"><span class="price" style="color:var(--color-mute);">ASK(別途お見積)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ▼ Category 04 -->
+    <div class="cat-block">
+      <div class="cat-head">
+        <div class="cat-no">Category 04</div>
+        <div class="cat-title">コンテンツ制作費<small>Content Production</small></div>
+        <div class="cat-sub">小計 / Subtotal &nbsp; <span class="price">¥600,000</span></div>
+      </div>
+      <table class="estimate-table" role="table">
+        <thead>
+          <tr>
+            <th class="col-item" scope="col">Item</th>
+            <th class="col-qty" scope="col">Qty</th>
+            <th class="col-price" scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-item"><div class="item-name">原稿作成(コピーライティング)<small>Copywriting</small></div></td>
+            <td class="col-qty">一式</td>
+            <td class="col-price"><span class="price">¥150,000</span></td>
+          </tr>
+          <tr>
+            <td class="col-item"><div class="item-name">写真撮影(都内1日)<small>Photography — 1 Day in Tokyo</small></div></td>
+            <td class="col-qty">1日</td>
+            <td class="col-price"><span class="price">¥100,000</span></td>
+          </tr>
+          <tr>
+            <td class="col-item"><div class="item-name">動画撮影・編集(主張あり / ブランドムービー)<small>Brand Movie — Direction &amp; Editing</small></div></td>
+            <td class="col-qty">一式</td>
+            <td class="col-price"><span class="price">¥300,000</span></td>
+          </tr>
+          <tr>
+            <td class="col-item"><div class="item-name">ロゴ・イラスト制作<small>Logo &amp; Illustration</small></div></td>
+            <td class="col-qty">一式</td>
+            <td class="col-price"><span class="price">¥50,000</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ▼ 合計表示 -->
+    <div class="total-wrap">
+      <div class="total-note">
+        Grand Total
+        <span class="ja">お見積もり総額</span>
+      </div>
+      <table class="total-table">
+        <tbody>
+          <tr class="sub">
+            <td>小計(税抜)</td>
+            <td><span class="price">¥3,000,000</span></td>
+          </tr>
+          <tr>
+            <td>消費税(10%)</td>
+            <td><span class="price">¥300,000</span></td>
+          </tr>
+          <tr class="grand">
+            <td>合計(税込)</td>
+            <td><span class="price">¥3,300,000</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <!-- ▲ ここまで 02 / Estimate ▲ -->
+
+  <hr class="divider">
+
+  <!-- ▼ ここから 03 / Maintenance ▼ -->
+  <section class="section" id="maintenance" aria-labelledby="mt-title">
+    <div class="section-head">
+      <div class="left">
+        <div class="section-num">03 — Maintenance</div>
+        <h2 class="section-label" id="mt-title">Optional Care</h2>
+        <div class="section-label-ja">保守運用プラン</div>
+      </div>
+      <div class="right">
+        <p style="font-family:var(--ff-jp);font-weight:400;font-size:15px;letter-spacing:0.08em;line-height:2.0;">
+          公開後も継続して伴走するための、月額制の運用プランをご用意しております。
+          サイトを「育てる」ためのパートナーとして、月次でお手伝いいたします。
+        </p>
+      </div>
+    </div>
+
+    <div class="maintenance">
+      <article class="care-card" aria-labelledby="care-title">
+        <div class="care-eyebrow">Optional Plan</div>
+        <h3 class="care-title" id="care-title">
+          Monthly <span class="em">Care</span> Plan
+        </h3>
+        <div class="care-title-ja">月額 保守運用プラン</div>
+
+        <div class="care-price">
+          <span class="price">¥30,000</span>
+          <span class="unit">/ 月額(税抜)</span>
+        </div>
+
+        <div class="care-divider" aria-hidden="true"></div>
+
+        <ul class="care-list">
+          <li>サーバー・ドメイン管理などの基本運用</li>
+          <li>月3回までの軽微な修正対応</li>
+          <li>月1回までのページ追加・修正</li>
+          <li>効果測定ミーティングの実施(月次)</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+  <!-- ▲ ここまで 03 / Maintenance ▲ -->
+
+  <hr class="divider">
+
+  <!-- ▼ ここから 04 / Schedule ▼ -->
+  <!-- <section class="section" id="schedule" aria-labelledby="sc-title">
+    <div class="section-head">
+      <div class="left">
+        <div class="section-num">04 — Schedule</div>
+        <h2 class="section-label" id="sc-title">Production Flow</h2>
+        <div class="section-label-ja">制作スケジュール</div>
+      </div>
+      <div class="right">
+        <p style="font-family:var(--ff-jp);font-weight:400;font-size:15px;letter-spacing:0.08em;line-height:2.0;">
+          ヒアリングから公開までを3つのフェーズに分け、各工程ごとに
+          確認のお時間をいただきながら丁寧に進行いたします。
+        </p>
+      </div>
+    </div>
+
+    <div class="timeline" role="list">
+      <div class="phase" role="listitem">
+        <div class="phase-no">Phase 01</div>
+        <div class="phase-period">
+          1 — 3<small>ヶ月 / Months</small>
+        </div>
+        <div class="phase-title">Discovery &amp; Design</div>
+        <p class="phase-detail">
+          ヒアリング、ペルソナ整理、UI/UX設計、<br>
+          ビジュアルデザイン、動線設計までを実施。
+        </p>
+      </div>
+
+      <div class="phase" role="listitem">
+        <div class="phase-no">Phase 02</div>
+        <div class="phase-period">
+          〜 2<small>ヶ月 / Months</small>
+        </div>
+        <div class="phase-title">Development</div>
+        <p class="phase-detail">
+          コーディング、WordPress実装、<br>
+          各種テスト・ブラウザ確認・調整。
+        </p>
+      </div>
+
+      <div class="phase" role="listitem">
+        <div class="phase-no">Phase 03</div>
+        <div class="phase-period">
+          〜 1<small>ヶ月 / Month</small>
+        </div>
+        <div class="phase-title">Launch</div>
+        <p class="phase-detail">
+          本番環境への移行、最終確認、<br>
+          公開およびリリース後の初期サポート。
+        </p>
+      </div>
+    </div>
+
+    <div class="schedule-total">
+      <span>Total Duration</span>
+      <strong>4 — 6 Months</strong>
+      <span class="ja">合計目安 4〜6ヶ月</span>
+    </div>
+  </section> -->
+  <!-- ▲ ここまで 04 / Schedule ▲ -->
+
+  <hr class="divider">
+
+  <!-- ▼ ここから 05 / Notes ▼ -->
+  <section class="section" id="notes" aria-labelledby="nt-title">
+    <div class="section-head">
+      <div class="left">
+        <!-- <div class="section-num">05 — Notes</div> -->
+        <div class="section-num">04 — Notes</div>
+        <h2 class="section-label" id="nt-title">Notes</h2>
+        <div class="section-label-ja">備考</div>
+      </div>
+      <div class="right"></div>
+    </div>
+
+    <div class="notes">
+      <div class="left">
+        <span class="eyebrow">Terms &amp; Conditions</span>
+      </div>
+      <div class="right">
+        <ol class="notes-list">
+          <li><span class="n">01</span><span>本見積は提示日より30日間有効です。</span></li>
+          <li><span class="n">02</span><span>金額はすべて税抜表記、別途消費税が発生いたします。</span></li>
+          <li><span class="n">03</span><span>仕様変更・追加要件が発生した場合は別途お見積もりとなります。</span></li>
+          <li><span class="n">04</span><span>写真・動画撮影は都内近郊1日を想定。遠方・複数日のご依頼は別途ご相談ください。</span></li>
+          <li><span class="n">05</span><span>既存サイトのデータ移行範囲については、別途協議のうえ決定いたします。</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <!-- ▲ ここまで 05 / Notes ▲ -->
+
+</main>
+
+<!-- ▼ ここから Footer ▼ -->
+<footer class="footer" id="contact">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      La-vie Factory
+      <small>Editorial Web Studio</small>
+    </div>
+    <div class="footer-contact">
+      <span class="label">Contact</span>
+      <a href="mailto:contact@example.com">contact@example.com</a><br>
+      TEL · 03-0000-0000<br>
+      Tokyo, Japan
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 La-vie Factory. All rights reserved.</span>
+    <span>Project Estimate № 001 / 2026.05</span>
+  </div>
+</footer>
+<!-- ▲ ここまで Footer ▲ -->
+
+</body>
+</html>

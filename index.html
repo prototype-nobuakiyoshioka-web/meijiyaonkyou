@@ -503,6 +503,18 @@ a{
   color:var(--color-ink-strong);
 }
 .total-table .grand td:first-child{letter-spacing:0.18em;}
+.total-table .tax-included td{
+  border-bottom:0;
+  padding-top:12px;
+  padding-bottom:0;
+  color:var(--color-mute);
+  font-size:12px;
+  font-weight:400;
+}
+.total-table .tax-included td:first-child{
+  color:var(--color-mute);
+  letter-spacing:0.08em;
+}
 .total-table .sub td{font-weight:600;color:var(--color-ink);}
 
 /* ============================================================
@@ -1052,6 +1064,10 @@ a{
           <tr class="grand">
             <td>合計(税抜)</td>
             <td><span class="price">¥3,000,000</span></td>
+          </tr>
+          <tr class="tax-included">
+            <td>税込額(10%)</td>
+            <td><span class="price">¥3,300,000</span></td>
           </tr>
         </tbody>
       </table>

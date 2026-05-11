@@ -3,16 +3,17 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Project Estimate — La-vie Factory</title>
-<meta name="description" content="Webサイトリニューアル ご提案・お見積もり / La-vie Factory" />
+<title>明治屋音響株式会社 Webサイトリニューアル ご提案・お見積もり | 株式会社bond</title>
+<meta name="description" content="明治屋音響株式会社 Webサイトリニューアル ご提案・お見積もり資料" />
+<meta name="robots" content="noindex, nofollow, noarchive" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
 
 <style>
 /* ============================================================
-   La-vie Factory — Project Estimate
+   Meijiya Onkyo — Project Estimate
    Tone: Clean / Minimal / Sans-serif Editorial
    ============================================================ */
 
@@ -147,7 +148,6 @@ a{
   letter-spacing:0.16em;
   color:var(--color-ink);
   font-size:16px;
-  text-transform:uppercase;
 }
 .hero-top .meta{
   text-align:right;
@@ -171,6 +171,7 @@ a{
 }
 .hero-eyebrow .rule{
   width:64px;height:1px;background:var(--color-line-strong);display:inline-block;
+  font-size:0;
 }
 .hero-title{
   font-family:var(--ff-display);
@@ -236,6 +237,7 @@ a{
 }
 .scroll-indicator .line{
   width:1px;height:56px;background:var(--color-line-strong);
+  font-size:0;
 }
 
 /* ============================================================
@@ -280,6 +282,18 @@ a{
   letter-spacing:0.06em;
   color:var(--color-ink);
   margin-bottom:48px;
+}
+.section-copy{
+  font-family:var(--ff-jp);
+  font-weight:400;
+  font-size:15px;
+  letter-spacing:0.08em;
+  line-height:2.0;
+}
+.tight-quote{
+  font-feature-settings:"palt";
+  letter-spacing:0;
+  white-space:nowrap;
 }
 .scope-grid{
   display:grid;
@@ -582,130 +596,6 @@ a{
 }
 
 /* ============================================================
-   ▼ SCHEDULE TIMELINE
-   ============================================================ */
-.timeline{
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  border-top:1px solid var(--color-ink);
-  border-bottom:1px solid var(--color-line);
-  margin-top:24px;
-}
-.phase{
-  padding:48px clamp(20px,3vw,40px) 56px;
-  border-left:1px solid var(--color-line);
-  position:relative;
-}
-.phase:first-child{border-left:0;}
-
-.phase-no{
-  font-family:var(--ff-display);
-  font-weight:500;
-  font-size:12px;
-  letter-spacing:0.28em;
-  color:var(--color-ink);
-  text-transform:uppercase;
-}
-.phase-period{
-  margin-top:14px;
-  font-family:var(--ff-display);
-  font-weight:300;
-  font-size:clamp(28px,3vw,40px);
-  letter-spacing:-0.01em;
-  color:var(--color-ink);
-  line-height:1.05;
-}
-.phase-period small{
-  display:block;
-  font-family:var(--ff-jp);
-  font-weight:500;
-  font-size:12px;
-  letter-spacing:0.2em;
-  color:var(--color-mute);
-  margin-top:8px;
-}
-.phase-title{
-  margin-top:32px;
-  font-family:var(--ff-jp);
-  font-weight:500;
-  font-size:14px;
-  letter-spacing:0.16em;
-  color:var(--color-ink);
-  padding-top:18px;
-  border-top:1px solid var(--color-line);
-}
-.phase-detail{
-  margin-top:14px;
-  font-size:13px;
-  color:var(--color-mute);
-  letter-spacing:0.04em;
-  line-height:1.95;
-}
-
-.schedule-total{
-  margin-top:48px;
-  display:flex;
-  justify-content:flex-end;
-  align-items:baseline;
-  gap:18px;
-  font-family:var(--ff-display);
-  letter-spacing:0.18em;
-  color:var(--color-mute);
-  font-size:12px;
-  text-transform:uppercase;
-}
-.schedule-total strong{
-  font-family:var(--ff-display);
-  font-weight:600;
-  font-size:clamp(20px,2.2vw,26px);
-  color:var(--color-ink);
-  letter-spacing:0.04em;
-  text-transform:none;
-}
-.schedule-total .ja{
-  font-family:var(--ff-jp);
-  font-weight:500;
-  font-size:12px;
-  letter-spacing:0.28em;
-  color:var(--color-ink);
-  text-transform:none;
-}
-
-/* ============================================================
-   ▼ NOTES
-   ============================================================ */
-.notes{
-  display:grid;
-  grid-template-columns:1fr 3fr;
-  gap:clamp(24px,5vw,80px);
-}
-.notes-list{
-  list-style:none;margin:0;padding:0;
-  border-top:1px solid var(--color-line);
-}
-.notes-list li{
-  display:grid;
-  grid-template-columns:48px 1fr;
-  gap:24px;
-  padding:22px 0;
-  border-bottom:1px solid var(--color-line);
-  font-family:var(--ff-jp);
-  font-weight:400;
-  font-size:14px;
-  letter-spacing:0.06em;
-  color:var(--color-ink);
-  line-height:1.95;
-}
-.notes-list li .n{
-  font-family:var(--ff-display);
-  font-weight:500;
-  font-size:12px;
-  letter-spacing:0.2em;
-  color:var(--color-ink);
-  padding-top:4px;
-}
-
-/* ============================================================
    ▼ FOOTER
    ============================================================ */
 .footer{
@@ -717,7 +607,7 @@ a{
   max-width:var(--max-w);
   margin:0 auto;
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:1fr;
   gap:48px;
   align-items:end;
 }
@@ -728,7 +618,7 @@ a{
   letter-spacing:0.02em;
   color:var(--color-ink);
   line-height:1;
-  text-transform:uppercase;
+  /* text-transform:uppercase; */
 }
 .footer-brand small{
   display:block;
@@ -739,23 +629,6 @@ a{
   color:var(--color-mute);
   margin-top:14px;
   text-transform:none;
-}
-.footer-contact{
-  text-align:right;
-  font-family:var(--ff-display);
-  font-size:13px;
-  letter-spacing:0.12em;
-  color:var(--color-ink);
-  line-height:2.2;
-}
-.footer-contact .label{
-  display:block;
-  font-weight:500;
-  font-size:11px;
-  letter-spacing:0.32em;
-  color:var(--color-mute);
-  margin-bottom:8px;
-  text-transform:uppercase;
 }
 .footer-bottom{
   max-width:var(--max-w);
@@ -782,7 +655,6 @@ a{
 
   .section-head,
   .overview-body,
-  .notes,
   .total-wrap{
     grid-template-columns:1fr;
   }
@@ -790,12 +662,7 @@ a{
 
   .scope-grid{grid-template-columns:1fr;}
 
-  .timeline{grid-template-columns:1fr;}
-  .phase{border-left:0;border-top:1px solid var(--color-line);}
-  .phase:first-child{border-top:0;}
-
   .footer-inner{grid-template-columns:1fr;align-items:start;}
-  .footer-contact{text-align:left;}
   .footer-bottom{flex-direction:column;gap:8px;}
 
   /* table -> card */
@@ -872,16 +739,23 @@ a{
   .hero-title{font-size:64pt;}
   .scroll-indicator{display:none;}
   .section{
+    page-break-inside:auto;
+    break-inside:auto;
+    page-break-before:auto;
+    padding:14mm 0;
+  }
+  .section-head,
+  .cat-block,
+  .total-wrap,
+  .care-card{
     page-break-inside:avoid;
     break-inside:avoid;
-    page-break-before:always;
-    padding:18mm 0;
   }
-  .section + .section{padding-top:18mm;}
+  .section + .section{padding-top:14mm;}
   .care-card{box-shadow:none;}
   .container{padding:0;max-width:100%;}
   a{color:inherit;border-bottom:0;}
-  .footer{page-break-before:always;}
+  .footer{padding:14mm 0 0;}
 }
 </style>
 </head>
@@ -891,16 +765,16 @@ a{
 <!-- ▼ ここから ヒーロー ▼ -->
 <header class="hero" id="top">
   <div class="hero-top">
-    <div class="brand">La-vie Factory</div>
+    <div class="brand">株式会社bond</div>
     <div class="meta">
-      For Private Review<br>
+      明治屋音響株式会社 御中<br>
       Issued · 2026.05
     </div>
   </div>
 
   <div class="hero-center">
     <div class="hero-eyebrow">
-      <span class="rule"></span>
+      <span class="rule" aria-hidden="true">&nbsp;</span>
       <span class="eyebrow">Proposal &amp; Estimate — № 001</span>
     </div>
     <h1 class="hero-title">
@@ -914,11 +788,11 @@ a{
   <div class="hero-bottom">
     <div class="hero-issue">
       <strong>Document</strong>
-      Confidential — Prepared by La-vie Factory
+      Confidential — Prepared by 株式会社bond
     </div>
     <div class="scroll-indicator" aria-hidden="true">
       <span>Scroll</span>
-      <span class="line"></span>
+      <span class="line">&nbsp;</span>
     </div>
   </div>
 </header>
@@ -937,7 +811,7 @@ a{
       </div>
       <div class="right">
         <p class="overview-lede">
-          明治屋音響様のこれまでの「軌跡」とこれからの「発展」を一本の「大きな木」とみたて<br>
+          明治屋音響様のこれまでの<span class="tight-quote">「軌跡」</span>とこれからの<span class="tight-quote">「発展」</span>を一本の<span class="tight-quote">「大きな木」</span>とみたて<br>
           歴史と未来をつなぐブランドストーリーを軸に、Webサイトのフルリニューアルをご提案いたします。
         </p>
       </div>
@@ -949,7 +823,8 @@ a{
       </div>
       <div class="right">
         <p>
-          約15ページ規模のフルリニューアルを想定。ペルソナ設計から
+          約15ページを目安としつつ、コーポレートサイトリニューアルに必要なページ一式を想定。
+          ペルソナ設計から
           UI/UXデザイン、ブランドムービーの撮影・編集、WordPressによる
           実装までをワンストップで担当いたします。既存サイトはWordPressを
           採用されているため、CMSの新規導入は不要です。新サイト用テーマの
@@ -984,8 +859,8 @@ a{
           </div>
           <div class="scope-item" role="listitem">
             <div class="num">06</div>
-            <div class="name">ページ制作 約15ページ</div>
-            <div class="name-en">Approx. 15 Pages</div>
+            <div class="name">ページ制作 一式</div>
+            <div class="name-en">Corporate Site Pages</div>
           </div>
         </div>
 
@@ -1009,7 +884,7 @@ a{
         <div class="section-label-ja">料金内訳</div>
       </div>
       <div class="right">
-        <p style="font-family:var(--ff-jp);font-weight:400;font-size:15px;letter-spacing:0.08em;line-height:2.0;">
+        <p class="section-copy">
           下記4カテゴリにて、企画から公開まで一貫した制作体制でお見積もりいたします。
           価格は税抜表記です。各項目は単独でのご依頼にも対応可能です。
         </p>
@@ -1074,7 +949,7 @@ a{
           </tr>
           <tr>
             <td class="col-item"><div class="item-name">下層ページ デザイン / コーディング<small>Sub Pages — Design &amp; Coding</small></div></td>
-            <td class="col-qty">14P (¥50,000 × 14)</td>
+            <td class="col-qty">一式</td>
             <td class="col-price"><span class="price">¥700,000</span></td>
           </tr>
           <tr>
@@ -1122,11 +997,6 @@ a{
             <td class="col-qty">一式</td>
             <td class="col-price"><span class="price">¥70,000</span></td>
           </tr>
-          <tr>
-            <td class="col-item"><div class="item-name">その他特殊機能(検索・予約・EC等)<small>Optional Features</small></div></td>
-            <td class="col-qty">—</td>
-            <td class="col-price"><span class="price" style="color:var(--color-mute);">ASK(別途お見積)</span></td>
-          </tr>
         </tbody>
       </table>
     </div>
@@ -1153,12 +1023,12 @@ a{
             <td class="col-price"><span class="price">¥150,000</span></td>
           </tr>
           <tr>
-            <td class="col-item"><div class="item-name">写真撮影(都内1日)<small>Photography — 1 Day in Tokyo</small></div></td>
+            <td class="col-item"><div class="item-name">写真撮影<small>Photography</small></div></td>
             <td class="col-qty">1日</td>
             <td class="col-price"><span class="price">¥100,000</span></td>
           </tr>
           <tr>
-            <td class="col-item"><div class="item-name">動画撮影・編集(主張あり / ブランドムービー)<small>Brand Movie — Direction &amp; Editing</small></div></td>
+            <td class="col-item"><div class="item-name">動画撮影・編集(ブランドムービー)<small>Brand Movie — Direction &amp; Editing</small></div></td>
             <td class="col-qty">一式</td>
             <td class="col-price"><span class="price">¥300,000</span></td>
           </tr>
@@ -1179,17 +1049,9 @@ a{
       </div>
       <table class="total-table">
         <tbody>
-          <tr class="sub">
-            <td>小計(税抜)</td>
-            <td><span class="price">¥3,000,000</span></td>
-          </tr>
-          <tr>
-            <td>消費税(10%)</td>
-            <td><span class="price">¥300,000</span></td>
-          </tr>
           <tr class="grand">
-            <td>合計(税込)</td>
-            <td><span class="price">¥3,300,000</span></td>
+            <td>合計(税抜)</td>
+            <td><span class="price">¥3,000,000</span></td>
           </tr>
         </tbody>
       </table>
@@ -1208,9 +1070,9 @@ a{
         <div class="section-label-ja">保守運用プラン</div>
       </div>
       <div class="right">
-        <p style="font-family:var(--ff-jp);font-weight:400;font-size:15px;letter-spacing:0.08em;line-height:2.0;">
+        <p class="section-copy">
           公開後も継続して伴走するための、月額制の運用プランをご用意しております。
-          サイトを「育てる」ためのパートナーとして、月次でお手伝いいたします。
+          サイトを<span class="tight-quote">「育てる」</span>ためのパートナーとして、月次でお手伝いいたします。
         </p>
       </div>
     </div>
@@ -1241,119 +1103,18 @@ a{
   </section>
   <!-- ▲ ここまで 03 / Maintenance ▲ -->
 
-  <hr class="divider">
-
-  <!-- ▼ ここから 04 / Schedule ▼ -->
-  <!-- <section class="section" id="schedule" aria-labelledby="sc-title">
-    <div class="section-head">
-      <div class="left">
-        <div class="section-num">04 — Schedule</div>
-        <h2 class="section-label" id="sc-title">Production Flow</h2>
-        <div class="section-label-ja">制作スケジュール</div>
-      </div>
-      <div class="right">
-        <p style="font-family:var(--ff-jp);font-weight:400;font-size:15px;letter-spacing:0.08em;line-height:2.0;">
-          ヒアリングから公開までを3つのフェーズに分け、各工程ごとに
-          確認のお時間をいただきながら丁寧に進行いたします。
-        </p>
-      </div>
-    </div>
-
-    <div class="timeline" role="list">
-      <div class="phase" role="listitem">
-        <div class="phase-no">Phase 01</div>
-        <div class="phase-period">
-          1 — 3<small>ヶ月 / Months</small>
-        </div>
-        <div class="phase-title">Discovery &amp; Design</div>
-        <p class="phase-detail">
-          ヒアリング、ペルソナ整理、UI/UX設計、<br>
-          ビジュアルデザイン、動線設計までを実施。
-        </p>
-      </div>
-
-      <div class="phase" role="listitem">
-        <div class="phase-no">Phase 02</div>
-        <div class="phase-period">
-          〜 2<small>ヶ月 / Months</small>
-        </div>
-        <div class="phase-title">Development</div>
-        <p class="phase-detail">
-          コーディング、WordPress実装、<br>
-          各種テスト・ブラウザ確認・調整。
-        </p>
-      </div>
-
-      <div class="phase" role="listitem">
-        <div class="phase-no">Phase 03</div>
-        <div class="phase-period">
-          〜 1<small>ヶ月 / Month</small>
-        </div>
-        <div class="phase-title">Launch</div>
-        <p class="phase-detail">
-          本番環境への移行、最終確認、<br>
-          公開およびリリース後の初期サポート。
-        </p>
-      </div>
-    </div>
-
-    <div class="schedule-total">
-      <span>Total Duration</span>
-      <strong>4 — 6 Months</strong>
-      <span class="ja">合計目安 4〜6ヶ月</span>
-    </div>
-  </section> -->
-  <!-- ▲ ここまで 04 / Schedule ▲ -->
-
-  <hr class="divider">
-
-  <!-- ▼ ここから 05 / Notes ▼ -->
-  <section class="section" id="notes" aria-labelledby="nt-title">
-    <div class="section-head">
-      <div class="left">
-        <!-- <div class="section-num">05 — Notes</div> -->
-        <div class="section-num">04 — Notes</div>
-        <h2 class="section-label" id="nt-title">Notes</h2>
-        <div class="section-label-ja">備考</div>
-      </div>
-      <div class="right"></div>
-    </div>
-
-    <div class="notes">
-      <div class="left">
-        <span class="eyebrow">Terms &amp; Conditions</span>
-      </div>
-      <div class="right">
-        <ol class="notes-list">
-          <li><span class="n">01</span><span>本見積は提示日より30日間有効です。</span></li>
-          <li><span class="n">02</span><span>金額はすべて税抜表記、別途消費税が発生いたします。</span></li>
-          <li><span class="n">03</span><span>仕様変更・追加要件が発生した場合は別途お見積もりとなります。</span></li>
-          <li><span class="n">04</span><span>写真・動画撮影は都内近郊1日を想定。遠方・複数日のご依頼は別途ご相談ください。</span></li>
-          <li><span class="n">05</span><span>既存サイトのデータ移行範囲については、別途協議のうえ決定いたします。</span></li>
-        </ol>
-      </div>
-    </div>
-  </section>
-  <!-- ▲ ここまで 05 / Notes ▲ -->
-
 </main>
 
 <!-- ▼ ここから Footer ▼ -->
-<footer class="footer" id="contact">
+<footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      La-vie Factory
-      <small>Editorial Web Studio</small>
-    </div>
-    <div class="footer-contact">
-      <span class="label">Contact</span>
-      <a href="mailto:contact@example.com">contact@example.com</a><br>
-      TEL · 03-0000-0000<br>
-      Tokyo, Japan
+      株式会社bond
+      <small>Prepared for 明治屋音響株式会社</small>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 La-vie Factory. All rights reserved.</span>
+    <span>© 2026 bond Inc. All rights reserved.</span>
     <span>Project Estimate № 001 / 2026.05</span>
   </div>
 </footer>
